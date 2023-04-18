@@ -1,0 +1,26 @@
+<h1>Componente Padre - formulario de Producto</h1>
+<div>
+    <label for="idProducto">ID de producto:</label>
+    <input type="text" id="idProducto" [(ngModel)]="p.idProducto">
+  </div>
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" [(ngModel)]="p.nombreProducto">
+  </div>
+  <div>
+    <label for="cantidadEnExistencia">Cantidad en existencia:</label>
+    <input type="text" id="cantidadEnExistencia" [(ngModel)]="p.cantidadExistencia">
+  </div>
+  <div>
+    <label for="precio">Precio:</label>
+    <input type="text" id="precio" [(ngModel)]="p.precio">
+  </div>
+  <div>
+    <label for="tipoProducto">Tipo de producto:</label>
+        <select [(ngModel)]="p.tipoProducto">
+            <option *ngFor="let item of tipos" [value]="item">{{item}}</option>
+        </select>
+  </div>
+  <button (click)="agregarElemento()">Añadir producto</button>
+  
+<app-hijo-lista-productos [productosHijo]="productos" [tieneElementosH]="tieneElementos"></app-hijo-lista-productos>

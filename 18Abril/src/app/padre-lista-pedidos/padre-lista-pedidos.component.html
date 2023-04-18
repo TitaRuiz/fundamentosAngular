@@ -1,0 +1,23 @@
+<app-hijo-formulario-pedidos (eventoHijo)="muestraDatos($event)"></app-hijo-formulario-pedidos>
+<h1>Lista pedidos en componente padre</h1>
+<div *ngIf="tieneElementos; else vacia">
+<table>
+    <tr>
+        <th>Id Pedido</th>
+        <th>Id Cliente</th>
+        <th>Nombre Cliente</th>
+        <th>Total de Productos </th>
+        <th>Importe total </th>
+    </tr>
+    <tr *ngFor="let elemento of pedidos">
+        <td>{{elemento.idPedido}}</td>
+        <td>{{elemento.idCliente}}</td>
+        <td>{{elemento.nombreCliente}}</td>
+        <td>{{elemento.totalProductos}}</td>
+        <td>{{elemento.importe}}</td>
+    </tr>
+</table>
+</div>
+<ng-template #vacia>
+    <div>No hay elementos que mostrar</div>
+</ng-template>

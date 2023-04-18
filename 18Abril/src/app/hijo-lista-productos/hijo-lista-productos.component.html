@@ -1,0 +1,23 @@
+<h1>Componente hijo - lista de productos</h1>
+
+<div *ngIf="tieneElementosH; else vacia">
+    <table>
+        <tr>
+            <th>Id Producto</th>
+            <th>Nombre producto</th>
+            <th>Cantidad en Existencia</th>
+            <th>Precio </th>
+            <th>Tipo de producto </th>
+        </tr>
+        <tr *ngFor="let elemento of productosHijo">
+            <td>{{elemento.idProducto}}</td>
+            <td>{{elemento.nombreProducto}}</td>
+            <td>{{elemento.cantidadExistencia}}</td>
+            <td>{{elemento.precio}}</td>
+            <td>{{elemento.tipoProducto}}</td>
+        </tr>
+    </table>
+</div>
+<ng-template #vacia>
+    <div>No hay elementos que mostrar</div>
+</ng-template>

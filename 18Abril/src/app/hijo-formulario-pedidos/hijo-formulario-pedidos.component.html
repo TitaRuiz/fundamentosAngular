@@ -1,0 +1,20 @@
+<h2>formualrio Pedidos en componente hijo</h2>
+
+    <label for="idPedido">ID Pedido:</label>
+    <input type="number" id="idPedido" [(ngModel)]="p.idPedido">
+  
+    <label for="idCliente">ID Cliente:</label>
+    <input type="number" id="idCliente" [(ngModel)]="p.idCliente">
+  
+    <label for="nombreCliente">Nombre del Cliente:</label>
+    <input type="text" id="nombreCliente" [(ngModel)]="p.nombreCliente">
+  
+    <label for="totalProductos">Total de Productos:</label>
+    <input type="number" id="totalProductos" [(ngModel)]="p.totalProductos">
+  
+    <label for="importeTotal">Importe Total:</label>
+    <input type="text" id="importeTotal" [(ngModel)]="p.importe">
+
+    <button (click)="insertarElemento()">Insertar Pedido</button>
+  
+  
