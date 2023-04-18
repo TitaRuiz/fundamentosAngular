@@ -1,0 +1,18 @@
+<h1>Datos recogidos en componente como padre</h1>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" [(ngModel)]="medico.nombre">
+    
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" [(ngModel)]="medico.apellido">
+    
+    <label for="cedula">Cédula:</label>
+    <input type="text" id="cedula" [(ngModel)]="medico.cedula">
+    
+    <label for="foto">Foto:</label>
+    <input type="text" id="foto" [(ngModel)]="medico.foto">
+
+    
+ 
+  <app-hijo-medico [hMedico]="medico"></app-hijo-medico>
+  

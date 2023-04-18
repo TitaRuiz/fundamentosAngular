@@ -1,0 +1,27 @@
+<app-hijo-paciente (eventoHijo)="agregarElemento($event)"></app-hijo-paciente>
+<div *ngIf="tieneElementos; else vacia">
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Dni</th>
+        <th>Telefono</th>
+        <th>Direccion</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let elemento of pacientes">
+        <td>{{elemento.nombre}}</td>
+        <td>{{elemento.apellido}}</td>
+        <td>{{elemento.dni}}</td>
+        <td>{{elemento.telefono}}</td>
+        <td>{{elemento.direccion}}</td>
+        <td>{{elemento.email}}</td>
+    </tr>
+    </table>
+</div>
+<ng-template #vacia>
+    <div>
+        No hay elementos que mostrar
+    </div>
+</ng-template>
+

@@ -1,0 +1,1 @@
+export type numeroAcotado= 1|2|3;

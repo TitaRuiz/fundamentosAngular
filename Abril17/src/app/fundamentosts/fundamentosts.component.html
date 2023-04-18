@@ -1,0 +1,26 @@
+<h1>Ejemplo con arrays</h1>
+<h2>Añadir elementos</h2>
+<input type="number"  [(ngModel)]="numero">
+<button (click)="anadir()">Añadir el número al array</button>
+
+<h2>Elementos del array</h2>
+<ul>
+    <li *ngFor="let elemento of miArray">{{ elemento }}</li>
+</ul>
+<h2>otras funciones</h2>
+<button (click)="otrasFunciones()">Otras funciones</button>
+<hr>
+<h2>Tipos union literales</h2>
+<input type="number"  [(ngModel)]="nAcotado" min="1" max="3">
+<p>Valor del número acotado {{nAcotado}}</p>
+<hr>
+<h2>Select con enumeracion</h2>
+<div>
+    <label for="selectEC">Estado Civil:</label>
+    <select id="selectEC" [(ngModel)]="selectedEC">
+      <option *ngFor="let item of opciones" [value]="item">{{item}}</option>
+    </select>
+  </div>
+<br/>
+<button (click)="mostrarValorSeleccionado()">Mostrar la Selección</button>
+  

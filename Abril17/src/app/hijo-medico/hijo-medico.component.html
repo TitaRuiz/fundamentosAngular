@@ -1,0 +1,21 @@
+<h1>Componente hijo - lista</h1>
+<button (click)="actualizarLista()">Actualizar lista</button>
+<div *ngIf="tieneElementos; else vacia">
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Cedula</th>
+            <th>Imagen</th>
+        </tr>
+        <tr *ngFor="let elemento of medicos">
+            <td>{{elemento.nombre}}</td>
+            <td>{{elemento.apellido}}</td>
+            <td>{{elemento.cedula}}</td>
+            <td><img [src]="elemento.foto"></td>
+        </tr>
+    </table>
+</div>
+<ng-template #vacia>
+    <div>No hay elementos que mostrar</div>
+</ng-template>
